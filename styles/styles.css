@@ -16,6 +16,46 @@
 	padding: 20px 0;
 }
 
+#loginModal .modal-content {
+	width: inherit !important;
+}
+
+#loginModal .modal-header {
+	background-color: #512da8;
+	color: #fff;
+}
+
+#loginModal .modal-header > button {
+	color: #d1c4e9;
+}
+
+#loginModal .modal-body {
+	background-color: #d1c4e9;
+}
+
+#reserveModal .modal-header {
+	color: #fff;
+	background-color: #512da8;
+}
+
+#loginModal .modal-content {
+	border: none;
+}
+
+#reserveModal .modal-header button {
+	color: #d1c4e9;
+}
+
+#reserveModal .modal-body {
+	color: #0f0f0f;
+	background-color: #d1c4e9;
+}
+
+#reserveModal .modal-footer {
+	background-color: #d1c4e9;
+	border: none;
+}
+
 .jumbotron {
 	margin: 0 auto;
 	padding: 70px 30px;

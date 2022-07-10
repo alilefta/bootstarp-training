@@ -62,7 +62,7 @@
 						</li>
 					</ul>
 					<span style="cursor: pointer" class="navbar-text">
-						<a data-toggle="modal" data-target="#loginModal">
+						<a id="loginModalShow">
 							<span class="fa fa-sign-in"></span> Login
 						</a>
 					</span>
@@ -88,7 +88,7 @@
 										class="form-control form-control-sm mr-auto"
 										placeholder="Email"
 										name="exampleInputEmail"
-										id="exampleInputPassword"
+										id="exampleInputEmail"
 									/>
 								</div>
 								<div class="form-group col-sm-4">
@@ -99,6 +99,7 @@
 										placeholder="Password"
 										name="exampleInputPassword"
 										id="exampleInputPassword"
+										autocomplete="false"
 									/>
 								</div>
 								<div class="col-sm-auto">
@@ -150,11 +151,7 @@
 							role="button"
 							href="#reserveform"
 							class="btn btn-warning text-white btn-lg"
-							data-html="true"
-							title="Or call us at <br><strong>+964 77 123456789</strong>"
-							data-placement="bottom"
-							data-toggle="modal"
-							data-target="#reserveModal"
+							id="reserveModalShow"
 							>Reserve Table</a
 						>
 					</div>
@@ -296,7 +293,7 @@
 													type="date"
 													name="date"
 													placeholder="Date"
-													id="datetime"
+													id="datetime-date"
 												/>
 											</div>
 											<div class="col-md-4">
@@ -305,23 +302,26 @@
 													type="time"
 													name="time"
 													placeholder="Time"
-													id="datetime"
+													id="datetime-time"
 												/>
 											</div>
 										</div>
 									</form>
 								</div>
-								<div class="modal-footer mr-auto offset-md-3">
+								<div class="modal-footer">
 									<!-- <div class="form-group row"> -->
 									<!-- <div class="col-md-8 d-flex"> -->
-									<button
-										type="button"
-										class="btn btn-secondary"
-										data-dismiss="modal"
-									>
-										Cancel
-									</button>
-									<button class="btn btn-primary">Reserve</button>
+									<div class="mr-auto offset-md-3">
+										<button
+											type="button"
+											class="btn btn-secondary"
+											data-dismiss="modal"
+										>
+											Cancel
+										</button>
+										<button class="btn btn-primary">Reserve</button>
+									</div>
+
 									<!-- </div> -->
 									<!-- </div> -->
 								</div>
@@ -512,7 +512,7 @@
 				<div class="card">
 					<h3 class="card-header bg-warning text-white">Reserve Table</h3>
 					<div class="card-body">
-						<form id="reserveform">
+						<form id="reserveform2">
 							<div class="form-group row">
 								<label class="col-md-3 col-form-label" for="guestsNum"
 									>Number of Guests:
@@ -523,60 +523,60 @@
 											class="form-check-input"
 											type="radio"
 											name="guestsNum"
-											id="oneGuest"
+											id="oneGuest1"
 											value="oneGuest"
 										/>
-										<label class="form-check-label" for="oneGuest">1</label>
+										<label class="form-check-label" for="oneGuest1">1</label>
 									</div>
 									<div class="form-check form-check-inline p-1">
 										<input
 											class="form-check-input"
 											type="radio"
 											name="guestsNum"
-											id="twoGuests"
+											id="twoGuests2"
 											value="twoGuests"
 										/>
-										<label class="form-check-label" for="twoGuests">2</label>
+										<label class="form-check-label" for="twoGuests2">2</label>
 									</div>
 									<div class="form-check form-check-inline p-1">
 										<input
 											class="form-check-input"
 											type="radio"
 											name="guestsNum"
-											id="threeGuests"
+											id="threeGuests3"
 											value="threeGuests"
 										/>
-										<label class="form-check-label" for="threeGuests">3</label>
+										<label class="form-check-label" for="threeGuests3">3</label>
 									</div>
 									<div class="form-check form-check-inline p-1">
 										<input
 											class="form-check-input"
 											type="radio"
 											name="guestsNum"
-											id="fourGuests"
+											id="fourGuests4"
 											value="fourGuests"
 										/>
-										<label class="form-check-label" for="fourGuests">4</label>
+										<label class="form-check-label" for="fourGuests4">4</label>
 									</div>
 									<div class="form-check form-check-inline p-1">
 										<input
 											class="form-check-input"
 											type="radio"
 											name="guestsNum"
-											id="fiveGuests"
+											id="fiveGuests5"
 											value="fiveGuests"
 										/>
-										<label class="form-check-label" for="fiveGuests">5</label>
+										<label class="form-check-label" for="fiveGuests5">5</label>
 									</div>
 									<div class="form-check form-check-inline p-1">
 										<input
 											class="form-check-input"
 											type="radio"
 											name="guestsNum"
-											id="sixGuests"
+											id="sixGuests6"
 											value="sixGuests"
 										/>
-										<label class="form-check-label" for="sixGuests">6</label>
+										<label class="form-check-label" for="sixGuests6">6</label>
 									</div>
 								</div>
 							</div>
@@ -590,13 +590,13 @@
 											<input
 												type="radio"
 												name="section"
-												id="non-smoking"
+												id="non-smoking2"
 												checked
 											/>
 											Non-Smoking
 										</label>
 										<label class="btn btn-danger">
-											<input type="radio" name="section" id="smoking" />
+											<input type="radio" name="section" id="smoking2" />
 											Smoking
 										</label>
 									</div>
@@ -612,7 +612,7 @@
 										type="date"
 										name="date"
 										placeholder="Date"
-										id="datetime"
+										id="datetime-date2"
 									/>
 								</div>
 								<div class="col-md-4">
@@ -621,7 +621,7 @@
 										type="time"
 										name="time"
 										placeholder="Time"
-										id="datetime"
+										id="datetime-time2"
 									/>
 								</div>
 							</div>
@@ -732,6 +732,14 @@
 						$("#carouselButton").children("span").removeClass("fa-play");
 						$("#carouselButton").children("span").addClass("fa-pause");
 					}
+				});
+
+				$("#loginModalShow").click(function () {
+					$("#loginModal").modal("toggle");
+				});
+
+				$("#reserveModalShow").click(function () {
+					$("#reserveModal").modal("toggle");
 				});
 			});
 		</script>
